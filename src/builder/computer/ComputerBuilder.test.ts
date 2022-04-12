@@ -1,4 +1,4 @@
-import { ComputerBuilder } from '@/Builder';
+import { ComputerBuilder } from '@/builder/computer/ComputerBuilder';
 
 describe('TestBuilderPattern ', () => {
   test('Build Computer', () => {

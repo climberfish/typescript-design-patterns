@@ -1,4 +1,5 @@
 {
+  "exclude" : ["src/**/*.(spec|test).ts"],
   "compilerOptions": {
     "target": "es6",
     "experimentalDecorators": true,
@@ -6,8 +7,7 @@
     "module": "commonjs",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "@/tests/*": ["tests/*"]
+      "@/*": ["src/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
