@@ -6,6 +6,7 @@
   },
   "extends": [
     "airbnb-base",
+    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
@@ -18,6 +19,7 @@
   },
   "plugins": ["@typescript-eslint", "import"],
   "rules": {
+    "max-len": ["error", { "code": 120 }],
     "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
     "no-useless-constructor": "off",
     "@typescript-eslint/no-useless-constructor": ["error"],
@@ -28,19 +30,19 @@
     "no-plusplus": "off",
     "no-use-before-define": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": "error"
+    "@typescript-eslint/no-shadow": "error",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "error"
   },
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      "node": {
-        "extensions": [".js"],
-        "moduleDirectory": ["src", "test"]
-      },
       "typescript": {
-        "extensions": [".js", ".d.ts", ".ts"],
-        "moduleDirectory": ["src", "test"]
+        "alwaysTryTypes": true,
+        "project": "./"
       }
     }
-  },
-  "excludes": ["/*.config.*"]
+  }
 }
